@@ -1,0 +1,147 @@
+{
+    "pepper_ma" : {
+        "data_path" : "./dataset/花椒麻度判别.xlsx",
+        "output_path" : "./result/麻度判别.xlsx",
+        "models_config" : {
+            "label" : "Sensory score",
+            "problem_type" : "regression",
+            "eval_metric" : "root_mean_squared_error",
+            "path" : "./models/reg",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "XGB" : {},
+            "NN_TORCH" : {},
+            "LR" : {}
+        },
+        "extra_metrics" : ["r2"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetTorch", "XGBoost"]
+    },
+
+    "pepper_origin" : {
+        "data_path" : "./dataset/花椒产地区分.xlsx",
+        "output_path" : "./result/产地区分.xlsx",
+        "models_config" : {
+            "label" : "class",
+            "problem_type" : "multiclass",
+            "eval_metric" : "log_loss",
+            "path" : "./models/clf",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "FASTAI" : {},
+            "NN_TORCH" : {},
+            "LR" : {},
+            "XGB" : {}
+        },
+        "extra_metrics" : ["accuracy"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetFastAI", "XGBoost"]
+    },
+
+    "pepper_adulteration_50%" : {
+        "data_path" : "./dataset/花椒掺假检验-50%.xlsx",
+        "output_path" : "./result/掺假检验-50%.xlsx",
+        "models_config" : {
+            "label" : "label",
+            "problem_type" : "binary",
+            "eval_metric" : "log_loss",
+            "path" : "./models/bil_clf",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "FASTAI" : {},
+            "NN_TORCH" : {},
+            "LR" : {},
+            "XGB" : {}
+        },
+        "extra_metrics" : ["accuracy", "precision", "recall", "f1", "roc_auc"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetFastAI", "XGBoost"]
+    },
+
+    "pepper_adulteration_20%" : {
+        "data_path" : "./dataset/花椒掺假检验-20%.xlsx",
+        "output_path" : "./result/掺假检验-20%.xlsx",
+        "models_config" : {
+            "label" : "label",
+            "problem_type" : "binary",
+            "eval_metric" : "log_loss",
+            "path" : "./models/bil_clf",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "FASTAI" : {},
+            "NN_TORCH" : {},
+            "LR" : {},
+            "XGB" : {}
+        },
+        "extra_metrics" : ["accuracy", "precision", "recall", "f1", "roc_auc"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetFastAI", "XGBoost"]
+    },
+
+    "pepper_adulteration_35%" : {
+        "data_path" : "./dataset/花椒掺假检验-35%.xlsx",
+        "output_path" : "./result/掺假检验-35%.xlsx",
+        "models_config" : {
+            "label" : "label",
+            "problem_type" : "binary",
+            "eval_metric" : "log_loss",
+            "path" : "./models/bil_clf",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "FASTAI" : {},
+            "NN_TORCH" : {},
+            "LR" : {},
+            "XGB" : {}
+        },
+        "extra_metrics" : ["accuracy", "precision", "recall", "f1", "roc_auc"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetFastAI", "XGBoost"]
+    },
+
+    "pepper_adulteration_65%" : {
+        "data_path" : "./dataset/花椒掺假检验-65%.xlsx",
+        "output_path" : "./result/掺假检验-65%.xlsx",
+        "models_config" : {
+            "label" : "label",
+            "problem_type" : "binary",
+            "eval_metric" : "log_loss",
+            "path" : "./models/bil_clf",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "FASTAI" : {},
+            "NN_TORCH" : {},
+            "LR" : {},
+            "XGB" : {}
+        },
+        "extra_metrics" : ["accuracy", "precision", "recall", "f1", "roc_auc"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetFastAI", "XGBoost"]
+    },
+
+    "pepper_adulteration_80%" : {
+        "data_path" : "./dataset/花椒掺假检验-80%.xlsx",
+        "output_path" : "./result/掺假检验-80%.xlsx",
+        "models_config" : {
+            "label" : "label",
+            "problem_type" : "binary",
+            "eval_metric" : "log_loss",
+            "path" : "./models/bil_clf",
+            "verbosity" : 1
+        },
+        "models_choose" : {
+            "KNN" : [{"weights": "distance", "ag_args": {"name_suffix" : "Dist"}}],
+            "FASTAI" : {},
+            "NN_TORCH" : {},
+            "LR" : {},
+            "XGB" : {}
+        },
+        "extra_metrics" : ["accuracy", "precision", "recall", "f1", "roc_auc"],
+        "preserve_models" : ["KNeighborsDist", "LinearModel", "NeuralNetFastAI", "XGBoost"]
+    }
+}

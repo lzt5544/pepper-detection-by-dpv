@@ -130,6 +130,7 @@ def plot(data , isshow = True):
     if isshow:
         plt.show()
     return ax
+
 def add_plot(ax, data):
     line_width = 0.5
     if data is None:
