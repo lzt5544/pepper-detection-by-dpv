@@ -1,0 +1,16 @@
+data_path : './dataset/origin.xlsx'
+test_size : 0.2
+predictor_cfgs :
+  label : 'class'
+  problem_type : 'multiclass'
+  eval_metric : 'log_loss'
+  path : './result/origin'
+  verbosity : 2
+train_cfgs : 
+  hyperparameter_tune_kwargs : 
+    num_trials : 500
+    scheduler : 'local'
+    searcher : 'auto'
+  num_bag_folds : 3
+metrics : ['acc', 'log_loss']
+sort_by : 'acc'

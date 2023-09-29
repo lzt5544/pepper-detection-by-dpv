@@ -1,0 +1,16 @@
+data_path : './dataset/fraud-50%.xlsx'
+test_size : 0.2
+predictor_cfgs :
+  label : 'label'
+  problem_type : 'binary'
+  eval_metric : 'log_loss'
+  path : './result/fraud/50%'
+  verbosity : 2
+train_cfgs : 
+  hyperparameter_tune_kwargs : 
+    num_trials : 500
+    scheduler : 'local'
+    searcher : 'auto'
+  num_bag_folds : 3
+metrics : ['acc', 'pre', 'rec', 'f1', 'auc']
+sort_by : 'acc'
