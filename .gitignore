@@ -1,5 +1,2 @@
-*.xlsx
 /__pycache__/
-/dataset/
 /result/
-/models/
